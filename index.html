@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免费短剧在线观看-短剧免费在线观看_全集短剧手机在线看</title>
+<meta name="description" content="免费短剧在线观看主题首页，梳理短剧免费在线观看的常见类型、观看方式与选择要点，提供按题材浏览、关键词搜索与手机在线观看入口，帮助观众快速找到想看的短剧内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2315151c'/%3E%3Cpath d='M26 20l18 12-18 12z' fill='%23ffb545'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#15151c;
+  --ink-2:#23232e;
+  --paper:#f6f4ef;
+  --paper-2:#ffffff;
+  --accent:#ffb545;
+  --accent-2:#e8623a;
+  --muted:#6c6a72;
+  --line:#e2ded4;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:100%;max-width:1140px;margin:0 auto;padding:0 22px}
+
+/* ---------- header ---------- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(21,21,28,.96);
+  color:#f4f1ea;
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.header-inner{
+  display:flex;align-items:center;gap:20px;
+  min-height:64px;flex-wrap:wrap;
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:17px;letter-spacing:.5px}
+.logo .mark{
+  width:32px;height:32px;border-radius:9px;
+  background:linear-gradient(140deg,#ffb545,#e8623a);
+  display:grid;place-items:center;flex:none;
+}
+.logo .mark svg{width:16px;height:16px}
+.logo span.brand{white-space:nowrap}
+.nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
+.nav a{
+  font-size:14px;padding:8px 12px;border-radius:8px;color:#d9d5cc;
+  transition:background .2s,color .2s;
+}
+.nav a:hover,.nav a:focus-visible{background:rgba(255,181,69,.16);color:#ffd08a;outline:none}
+.nav a.cta{
+  background:var(--accent);color:#20180a;font-weight:600;
+}
+.nav a.cta:hover{background:#ffc46b}
+
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(900px 340px at 88% -10%,rgba(255,181,69,.20),transparent 70%),
+    radial-gradient(700px 300px at 8% 110%,rgba(232,98,58,.16),transparent 70%),
+    var(--ink);
+  color:#f6f2ea;
+  padding:56px 0 60px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.25fr .85fr;gap:44px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;
+  color:#ffce8a;border:1px solid rgba(255,181,69,.4);
+  padding:5px 12px;border-radius:999px;margin-bottom:18px;
+}
+.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+h1{
+  font-size:clamp(28px,4.4vw,44px);
+  line-height:1.28;font-weight:800;letter-spacing:1px;
+  margin-bottom:16px;
+}
+.hero p.lead{
+  font-size:16px;color:#cfcac1;max-width:44ch;margin-bottom:26px;
+}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:10px;font-size:15px;font-weight:600;
+  transition:transform .18s,background .2s,color .2s;
+}
+.btn-primary{background:var(--accent);color:#20180a}
+.btn-primary:hover{background:#ffc46b;transform:translateY(-1px)}
+.btn-ghost{border:1px solid rgba(255,255,255,.28);color:#f3efe6}
+.btn-ghost:hover{background:rgba(255,255,255,.08);transform:translateY(-1px)}
+.hero-stats{display:flex;gap:26px;flex-wrap:wrap;font-size:13.5px;color:#b6b1a8}
+.hero-stats b{display:block;font-size:19px;color:#ffce8a;font-weight:700}
+
+/* phone visual */
+.poster{
+  position:relative;
+  border-radius:22px;
+  padding:18px;
+  background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 26px 60px -28px rgba(0,0,0,.9);
+}
+.poster-screen{
+  border-radius:14px;overflow:hidden;background:#0d0d13;
+  aspect-ratio:9/13;
+  position:relative;
+  border:1px solid rgba(255,255,255,.08);
+}
+.poster-screen svg{width:100%;height:100%}
+.poster-tag{
+  position:absolute;left:12px;bottom:12px;right:12px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:12px;color:#f3efe6;
+  background:rgba(13,13,19,.72);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:10px;padding:8px 10px;
+}
+.poster-tag em{font-style:normal;color:#ffce8a}
+
+/* ---------- sections ---------- */
+section{padding:58px 0}
+.sec-head{max-width:62ch;margin-bottom:30px}
+.sec-kicker{
+  font-size:12.5px;letter-spacing:2px;color:var(--accent-2);
+  font-weight:700;text-transform:uppercase;margin-bottom:8px;
+}
+h2{font-size:clamp(21px,2.6vw,27px);line-height:1.4;font-weight:800;letter-spacing:.5px}
+.sec-head p{margin-top:10px;color:var(--muted);font-size:15px}
+
+/* genre cards */
+.genre-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+}
+.card{
+  background:var(--paper-2);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:22px;
+  transition:transform .2s,box-shadow .2s,border-color .2s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 16px 34px -22px rgba(21,21,28,.5);border-color:#d3ccbd}
+.card .ico{
+  width:40px;height:40px;border-radius:11px;display:grid;place-items:center;
+  background:#fff2dc;color:#b8702c;margin-bottom:14px;
+}
+.card .ico svg{width:20px;height:20px}
+.card h3{font-size:16.5px;margin-bottom:6px;font-weight:700}
+.card p{font-size:14px;color:var(--muted);line-height:1.7}
+
+/* filter / search */
+.search-panel{
+  background:var(--ink);
+  color:#f4f1ea;
+  border-radius:20px;
+  padding:30px;
+}
+.search-panel h2{color:#fff;margin-bottom:6px}
+.search-panel .hint{color:#b6b1a8;font-size:14px;margin-bottom:20px}
+.search-row{display:flex;gap:10px;flex-wrap:wrap}
+.search-row input{
+  flex:1 1 260px;min-width:0;
+  padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,.18);
+  background:rgba(255,255,255,.06);color:#fff;font-size:15px;
+  font-family:inherit;
+}
+.search-row input::placeholder{color:#8e897f}
+.search-row input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.search-row button{
+  padding:12px 24px;border-radius:10px;border:0;cursor:pointer;
+  background:var(--accent);color:#20180a;font-weight:700;font-size:15px;
+  font-family:inherit;transition:background .2s;
+}
+.search-row button:hover{background:#ffc46b}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{
+  font-size:13px;padding:6px 13px;border-radius:999px;
+  border:1px solid rgba(255,255,255,.2);color:#ddd8cf;
+  background:transparent;cursor:pointer;font-family:inherit;
+  transition:background .2s,color .2s,border-color .2s;
+}
+.chip:hover,.chip.active{background:rgba(255,181,69,.18);border-color:var(--accent);color:#ffd08a}
+.result-note{margin-top:16px;font-size:13.5px;color:#a8a39a;min-height:22px}
+
+/* article split */
+.split{display:grid;grid-template-columns:1.4fr .9fr;gap:36px;align-items:start}
+.prose p{font-size:15.5px;color:#3c3a41;margin-bottom:16px}
+.prose p strong{color:var(--ink)}
+.prose h3{font-size:17px;margin:24px 0 10px;font-weight:700}
+.aside-card{
+  background:var(--paper-2);border:1px solid var(--line);
+  border-radius:var(--radius);padding:24px;
+}
+.aside-card h3{font-size:16px;margin-bottom:14px}
+.checklist{list-style:none;display:grid;gap:12px}
+.checklist li{display:flex;gap:10px;font-size:14px;color:#4a484f;line-height:1.65}
+.checklist li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--accent-2)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{
+  background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;position:relative;
+}
+.step .num{
+  font-size:13px;font-weight:800;color:#fff;background:var(--ink);
+  width:28px;height:28px;border-radius:8px;display:grid;place-items:center;
+  margin-bottom:14px;
+}
+.step h3{font-size:16px;margin-bottom:8px}
+.step p{font-size:14px;color:var(--muted)}
+
+/* faq */
+.faq{display:grid;gap:14px;max-width:860px}
+details{
+  background:var(--paper-2);border:1px solid var(--line);
+  border-radius:12px;padding:16px 20px;
+}
+details[open]{border-color:#d3ccbd}
+summary{
+  cursor:pointer;font-weight:700;font-size:15.5px;list-style:none;
+  display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:19px;color:var(--accent-2);font-weight:700;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;font-size:14.5px;color:#4a484f}
+
+/* footer */
+.site-footer{
+  background:var(--ink);color:#a8a39a;padding:44px 0 34px;font-size:14px;
+}
+.footer-grid{display:flex;gap:34px;flex-wrap:wrap;justify-content:space-between;align-items:flex-start}
+.footer-brand .logo{color:#f4f1ea;margin-bottom:12px}
+.footer-brand p{max-width:38ch;line-height:1.75;font-size:13.5px}
+.footer-links{display:flex;gap:40px;flex-wrap:wrap}
+.footer-links h4{color:#f4f1ea;font-size:14px;margin-bottom:10px;font-weight:700}
+.footer-links a{display:block;font-size:13.5px;padding:3px 0;color:#a8a39a;transition:color .2s}
+.footer-links a:hover{color:#ffce8a}
+.copyright{
+  border-top:1px solid rgba(255,255,255,.1);margin-top:32px;padding-top:18px;
+  font-size:12.5px;color:#7d786f;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+/* responsive */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:34px}
+  .poster{max-width:340px}
+  .genre-grid,.steps{grid-template-columns:repeat(2,1fr)}
+  .split{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .header-inner{min-height:58px;gap:12px}
+  .logo{font-size:15px}
+  .logo .mark{width:28px;height:28px}
+  .nav{margin-left:0;width:100%;order:3;gap:2px;padding-bottom:10px;overflow-x:auto}
+  .nav a{font-size:13px;padding:7px 10px;white-space:nowrap}
+  .hero{padding:38px 0 44px}
+  h1{font-size:26px;letter-spacing:.5px}
+  .hero p.lead{font-size:15px}
+  section{padding:42px 0}
+  .genre-grid,.steps{grid-template-columns:1fr}
+  .search-panel{padding:22px}
+  .btn{padding:11px 18px;font-size:14.5px}
+  .footer-grid{gap:24px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.5l11 6.5-11 6.5z" fill="#20180a"/></svg>
+      </span>
+      <span class="brand">免费短剧在线观看</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#genres">短剧题材</a>
+      <a href="#search">搜索短剧</a>
+      <a href="#guide">观看指南</a>
+      <a href="#faq">常见问题</a>
+      <a class="cta" href="#search">开始观看</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">短剧 · 免费 · 在线</span>
+        <h1>免费短剧在线观看</h1>
+        <p class="lead">把零散在各类平台上的短剧信息整理到一处：先看题材介绍，再按关键词搜索，最后进入对应页面观看。每一集都短，适合通勤、午休与睡前的小段时间。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            查找想看的短剧
+          </a>
+          <a class="btn btn-ghost" href="#genres">按题材浏览</a>
+        </div>
+        <div class="hero-stats">
+          <div><b>4 类</b>常见题材分区</div>
+          <div><b>3 步</b>找到并观看短剧</div>
+          <div><b>手机优先</b>竖屏观看友好</div>
+        </div>
+      </div>
+
+      <div class="poster" aria-hidden="true">
+        <div class="poster-screen">
+          <svg viewBox="0 0 270 390" role="presentation">
+            <defs>
+              <linearGradient id="pg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#2a1f3d"/>
+                <stop offset="1" stop-color="#12121a"/>
+              </linearGradient>
+              <linearGradient id="pg2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffb545"/>
+                <stop offset="1" stop-color="#e8623a"/>
+              </linearGradient>
+            </defs>
+            <rect width="270" height="390" fill="url(#pg)"/>
+            <circle cx="205" cy="70" r="52" fill="#ffb545" opacity=".16"/>
+            <circle cx="60" cy="300" r="70" fill="#e8623a" opacity=".13"/>
+            <rect x="30" y="236" width="210" height="8" rx="4" fill="#ffffff" opacity=".1"/>
+            <rect x="30" y="258" width="150" height="8" rx="4" fill="#ffffff" opacity=".07"/>
+            <circle cx="135" cy="160" r="44" fill="none" stroke="#ffb545" stroke-width="1.5" opacity=".5"/>
+            <path d="M122 140l34 20-34 20z" fill="url(#pg2)"/>
+            <rect x="30" y="300" width="70" height="22" rx="11" fill="#ffffff" opacity=".14"/>
+            <rect x="110" y="300" width="52" height="22" rx="11" fill="#ffffff" opacity=".1"/>
+            <rect x="172" y="300" width="68" height="22" rx="11" fill="#ffffff" opacity=".07"/>
+          </svg>
+        </div>
+        <div class="poster-tag">
+          <span>竖屏剧集 · 每集约 1–3 分钟</span>
+          <em>免费观看</em>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GENRES -->
+  <section id="genres">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">题材导航</div>
+        <h2>先按题材缩小范围，再决定看哪一部</h2>
+        <p>短剧体量小、节奏快，题材标签比片名更好用。下面四类是目前较常见的短剧方向，每类都附带一段观看提示，方便判断是否符合自己的口味。</p>
+      </div>
+
+      <div class="genre-grid">
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-4.5-7-9.5A4.5 4.5 0 0112 7a4.5 4.5 0 017 3.5C19 15.5 12 20 12 20z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>都市情感</h3>
+          <p>围绕职场、婚恋与家庭关系展开，冲突集中在前几集。适合喜欢现实感对话、想在短时间内看完一段完整情感线的观众。</p>
+        </article>
+
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 4h14v16H5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8h6M9 12h6M9 16h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>古装宅斗</h3>
+          <p>以家族内部矛盾和身份反转为看点，服化道与台词是主要辨识度。观看前可留意剧集是否标注完整结局，避免中途断档。</p>
+        </article>
+
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>悬疑反转</h3>
+          <p>靠信息差和结尾反转吸引追更，单集信息密度高。建议从第一集顺序观看，跳集容易漏掉铺垫，影响对结局的理解。</p>
+        </article>
+
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 18V9l8-5 8 5v9" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 18v-5h6v5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>甜宠轻喜</h3>
+          <p>节奏轻快、冲突温和，适合碎片时间放松。多数作品单集时长较短，适合在通勤或排队时连续观看两三集。</p>
+        </article>
+
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h10M4 18h13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>逆袭成长</h3>
+          <p>主角从低谷走向转折，爽点集中在中期。此类短剧常见于合集形式，观看时注意确认是否为同一部作品的连续剧集。</p>
+        </article>
+
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.5l5 2.5-5 2.5z" fill="currentColor"/></svg>
+          </div>
+          <h3>更多题材</h3>
+          <p>短剧类型还在不断细分。使用下方搜索框输入题材词或片名关键词，可以更快定位到符合当前心情的那一类内容。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH -->
+  <section id="search">
+    <div class="wrap">
+      <div class="search-panel">
+        <h2>搜索短剧：输入片名或题材关键词</h2>
+        <p class="hint">搜索框只做页面内的关键词筛选演示，输入后点击“搜索”或按回车，下方会提示匹配到的题材分区。重要内容仍以静态列表为准。</p>
+        <form class="search-row" id="searchForm" role="search" aria-label="短剧关键词搜索">
+          <input type="search" id="q" name="q" placeholder="例如：都市情感、悬疑反转、甜宠" autocomplete="off" aria-label="输入短剧关键词">
+          <button type="submit">搜索</button>
+        </form>
+        <div class="chips" role="group" aria-label="热门题材快捷筛选">
+          <button class="chip" type="button" data-k="都市情感">都市情感</button>
+          <button class="chip" type="button" data-k="古装宅斗">古装宅斗</button>
+          <button class="chip" type="button" data-k="悬疑反转">悬疑反转</button>
+          <button class="chip" type="button" data-k="甜宠轻喜">甜宠轻喜</button>
+          <button class="chip" type="button" data-k="逆袭成长">逆袭成长</button>
+        </div>
+        <p class="result-note" id="resultNote" aria-live="polite">可先点选上方题材标签，再决定是否进入对应分区观看。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE -->
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">观看指南</div>
+        <h2>免费短剧在线观看的三步路径</h2>
+        <p>短剧的入口分散在不同平台，先把“找片”这一步做扎实，后面的观看体验会顺畅很多。</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="num">1</div>
+          <h3>确认题材与集数</h3>
+          <p>先看题材标签和总集数，判断是否属于自己常看的方向。集数标注完整的作品，通常更容易一次看完。</p>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <h3>检查观看设备</h3>
+          <p>短剧多为竖屏拍摄，手机观看更贴合画面比例。若用电脑观看，可适当调整窗口宽度，避免画面被裁切。</p>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <h3>顺序观看不跳集</h3>
+          <p>悬疑与反转类短剧依赖前情铺垫，建议从第一集顺序观看。遇到合集列表时，先确认剧集命名是否连续。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section id="about">
+    <div class="wrap split">
+      <div class="prose">
+        <div class="sec-kicker">主题说明</div>
+        <h2>免费短剧在线观看，到底在看什么</h2>
+        <p>短剧是一种单集时长较短、以连续剧情推进的网络剧集形式。相比传统长剧，它更依赖开篇几集建立冲突，因此“前两集好不好看”往往决定了观众是否继续。对想尝试<strong>免费短剧在线观看</strong>的观众来说，先理解这一点，能减少试错成本。</p>
+
+        <h3>短剧与长剧的差别</h3>
+        <p>长剧用篇幅铺陈人物关系，短剧则把关键转折压缩到更短的时长里。这意味着信息密度更高，也意味着部分作品会在节奏上显得急促。观看时不必强求每部都看完，找到符合自己节奏的题材更重要。</p>
+
+        <h3>免费观看需要注意什么</h3>
+        <p>免费内容通常伴随广告或平台限制，剧集完整性也可能因来源不同而有差异。建议优先选择标注清晰、集数连贯的页面，并在观看前确认是否为同一部作品的完整剧集。对于标注“待更新”的作品，可以稍后再看，避免看到一半中断。</p>
+
+        <h3>如何用好这个首页</h3>
+        <p>本页把题材分区、关键词搜索与观看提示放在同一条路径上：先从题材卡片了解方向，再用搜索框缩小范围，最后按指南顺序观看。这样即使面对大量短剧，也能在几分钟内确定目标，而不是在多个页面之间反复跳转。</p>
+      </div>
+
+      <aside class="aside-card">
+        <h3>观看前自查清单</h3>
+        <ul class="checklist">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>题材标签是否与自己的偏好一致</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>总集数是否标注完整、命名是否连续</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>单集时长是否适合当前的空闲时间</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>手机竖屏观看时画面是否被裁切</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>是否从第一集开始顺序观看</span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-kicker">常见问题</div>
+        <h2>关于免费短剧在线观看的几个疑问</h2>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>短剧一般一集多长？</summary>
+          <p>不同作品差异较大，常见范围为单集一两分钟到数分钟。具体时长以剧集页面标注为准，观看前可先看首集确认节奏是否合适。</p>
+        </details>
+        <details>
+          <summary>为什么有些短剧看起来不完整？</summary>
+          <p>短剧来源渠道较多，部分页面只收录了片段或前几集。遇到集数不连续、结尾缺失的情况，通常是来源本身的问题，建议换一个标注更完整的入口查看。</p>
+        </details>
+        <details>
+          <summary>手机和电脑观看有什么区别？</summary>
+          <p>短剧多为竖屏画幅，手机端更接近原始比例。电脑端观看时窗口较宽，画面两侧可能出现留白或被裁切，调整窗口比例可以改善观感。</p>
+        </details>
+        <details>
+          <summary>如何快速找到某一类短剧？</summary>
+          <p>优先使用题材关键词，例如“都市情感”“悬疑反转”，比输入完整片名更容易匹配到同类作品。本页搜索框与题材标签都可以作为筛选起点。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.5l11 6.5-11 6.5z" fill="#20180a"/></svg>
+          </span>
+          <span class="brand">免费短剧在线观看</span>
+        </div>
+        <p>围绕免费短剧在线观看整理题材分区、搜索入口与观看提示，帮助观众用更短的时间找到想看的短剧。</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>浏览</h4>
+          <a href="#genres">短剧题材</a>
+          <a href="#search">搜索短剧</a>
+          <a href="#guide">观看指南</a>
+        </div>
+        <div>
+          <h4>参考</h4>
+          <a href="#about">主题说明</a>
+          <a href="#faq">常见问题</a>
+          <a href="#top">回到顶部</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2025 免费短剧在线观看 · 内容索引与观看提示</span>
+      <span>页面内容以题材说明与观看方法为主</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('q');
+  var note = document.getElementById('resultNote');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var map = {
+    '都市情感':'都市情感',
+    '古装':'古装宅斗',
+    '宅斗':'古装宅斗',
+    '悬疑':'悬疑反转',
+    '反转':'悬疑反转',
+    '甜宠':'甜宠轻喜',
+    '轻喜':'甜宠轻喜',
+    '逆袭':'逆袭成长',
+    '成长':'逆袭成长'
+  };
+  function setActive(name){
+    chips.forEach(function(c){
+      c.classList.toggle('active', c.getAttribute('data-k') === name);
+    });
+  }
+  function run(keyword){
+    var kw = (keyword || '').trim();
+    if(!kw){
+      note.textContent = '请输入片名或题材关键词，例如“悬疑反转”。';
+      return;
+    }
+    var hit = null;
+    for(var k in map){
+      if(kw.indexOf(k) !== -1){ hit = map[k]; break; }
+    }
+    if(hit){
+      setActive(hit);
+      note.textContent = '已匹配到「' + hit + '」题材分区，可向下浏览该题材介绍。';
+    }else{
+      setActive('');
+      note.textContent = '暂未直接匹配到「' + kw + '」，可尝试“都市情感”“悬疑反转”等题材词。';
+    }
+  }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    run(input.value);
+  });
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      var k = c.getAttribute('data-k');
+      input.value = k;
+      run(k);
+    });
+  });
+})();
+</script>
+</body>
+  </html>
